@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Passing props in Class Components</title>
+
+     <!-- REACT LIBRARY -->
+     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+     <!-- REACT DOM LIBRARY -->
+     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+     <!-- BABEL LIBRARY -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+   <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+   <div id="app">REACT HAS NOT RENDERED YET!</div>
+
+   <!-- JAVASCRIPT -->
+   <script type="text/babel">
+      class PersonGreeting extends React.Component {
+          render () {
+              let personStyle = {
+                  height: 300,
+                  width: 300,
+                  backgroundColor: this.props.color,
+                  fontSize: 40,
+                  textAlign: "center",
+                  margin: 10,
+                  }
+              return (
+               <div style={personStyle}>Hello, {this.props.name}! </div>
+              );
+          }
+      }
+     ReactDOM.render(
+         <div>
+         <PersonGreeting color="tomato" name="Shashi"/>
+         <PersonGreeting color="blue" name="Jhansi"/>
+         <PersonGreeting color="green" name="Chakki"/>
+         <PersonGreeting color="yellow" name="Chukki"/>
+         </div>,
+         document.getElementById("app")
+     );
+   </script>    
+</body>
+</html>
+

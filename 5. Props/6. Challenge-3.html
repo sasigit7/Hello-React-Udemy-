@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Let's React with standard example</title>
+    
+    <!-- REACT LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">REACT HAS NOT RENDERED YET!</div>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+     // PASS PROPS FROM PARENT FULLNAME COMPONENT TO CHILDREN COMPONENTS - FIRSTNAME, PROFILE AND LASTNAME
+    //CHILD COMPONENT
+    class FirstName extends React.Component {
+    render() {
+        return(
+        <h1>{this.props.firstname}</h1>
+        );
+    }
+    }
+     //CHILD COMPONENT
+    class LastName extends React.Component {
+    render() {
+        return(
+        <h1>{this.props.lastname}</h1>
+        );
+        }
+    }
+     //CHILD COMPONENT
+    class Profile extends React.Component {
+    render() {
+        return(
+        <img src={this.props.img}/>
+        );
+    }
+    }
+
+// PARENT COMPONENT:
+    class FullName extends React.Component {
+    render() {
+        return(
+        <div>
+            {/* Insert your FirstName, LastName and Profile components */}
+            <FirstName firstname={this.props.firstname} />
+            <LastName lastname={this.props.lastname} />
+            <Profile img={this.props.img} />
+         </div>
+        );
+    }
+    }
+        
+    ReactDOM.render(
+    <FullName 
+        firstname="Shashi"
+        lastname="Mand"
+        img="https://media.licdn.com/dms/image/C5603AQE0ebHPE9E3eg/profile-displayphoto-shrink_200_200/0?e=1573084800&v=beta&t=ftDKswVyIXhIAysqLYNJjfwJ0FraSW5JqfvE_5zPlqE"
+        />,
+    document.getElementById("app")
+    );
+</script>
+
+</body>
+</html>
+

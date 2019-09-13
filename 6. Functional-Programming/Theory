@@ -1,0 +1,55 @@
+                     ::::::::::FUNCTIONAL PROGRAMMING::::::::::
+
+ 1. ACCORDING TO ERIC ELLIOTT, FUNCTIONAL PROGRAMMING GLOSSARIES CONTAIN A 
+    LARGE NUMBER OF LARGE WORDS, BUT AT IT'S CORE, THE ESSENCE OF FUNCTIONAL 
+    PROGRAMMING IS REALLY VERY VERY SIMPLE; PROGRAMS ARE BUILT MOSTLY WITH 
+    A HANDFUL OF VERY SMALL, VERY RE USABLE, VERY PREDICTABLE PURE FUNCTIONS. 
+ 2. A PURE FUNCTION IS A FUNCTION IN WHICH: 
+      - GIVEN THE SAME INPUT, WILL ALWAYS RETURN THE SAME OUTPUT.
+      - PRODUCE NO SIDE EFFECTS.
+      - RELIES ON NO EXTERNAL STATE. 
+ 3. JAVASCRIPT CAN HANDLE HIGH ORDER FUNCTIONS
+ 4. A HIGHER ORDER FUNCTION IS A FUNCTION THAT CAN TAKE ANOTHER FUNCTION AS 
+    AN ARGUMENT, OR THAT RETURNS A FUNCTION AS A RESULT.  
+ 5. THREE HIGH ORDER FUNCTION METHODS :
+    - MAP METHOD: 
+      Example : 
+           map([corn, cow, chicken], cook) => [popcorn, burger, eggs];
+        Here ->> map is a method 
+           -> [corn, cow, chicken] is an array
+           -> cook is a function
+           -> [popcorn, burger, eggs] is a new array
+
+    - FILTER METHOD: 
+            Syntax => 
+                array.filter(function(currentValue), {
+                  return true; 
+            });
+                // returns an array of true values. 
+
+                 -> function() is a function argument , a callback function
+                 -> currentValue is an Element in an array.
+
+            Example => 
+            filter([popcorn, burger, eggs], isVegetarian) => [popcorn, eggs];
+        Here ->>  filter is a method
+            -> [popcorn, burger, eggs] is an array
+            -> isVegetarian is a function which evaluates true or false 
+            -> [popcorn, eggs] is a new array    
+   
+    - REDUCE METHOD: 
+            reduce([popcorn, eggs], eat) => crap
+        Here ->> reduce is a method
+            -> [popcorn, eggs] is an array
+            ->  eat is a function 
+            -> returns a single value, here crap
+
+
+
+
+   
+
+
+
+
+      

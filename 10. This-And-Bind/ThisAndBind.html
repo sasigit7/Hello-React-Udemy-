@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This And Bind</title>
+    
+    <!-- REACT LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">REACT HAS NOT RENDERED YET!</div>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+    // Example-1:::
+    //   let cat = {};
+    //       cat = {
+    //         sound: "Meow",
+    //         speak: function() {
+    //             console.log(this.sound);
+    //         }
+    //      };
+    //      cat.speak(); // "Meow"
+
+        //  let speakFunction = cat.speak();
+        //  speakFunction(); // Undefined
+
+        // let speakFunction = cat.speak();
+        // let speakFunctionBind = speakFunction.bind(cat);
+        // speakFunctionBind(); // "Meow"
+
+        // Example-2:::
+             let person1 = {
+                 name: 'Shashi'
+             };
+
+             let person2 = {
+                 name: "Jhansi"
+             }
+            
+            // Use bind method twice to give "this" the context of person1 and person2. 
+             function namer() {
+                 return this.name;
+             }
+             console.log(namer.bind(person1)()); // Shashi
+             console.log(namer.bind(person2)());  // Jhansi
+
+            //Example-3: 
+        //     let number = {
+        //         x: 25,
+        //         y: 35
+        //     };
+
+        //     let count = function () {
+        //         console.log(this.x + this.y);
+        //     }
+
+        //     console.log(count()); // NaN
+         
+        //  let boundFunc = count.bind(number);
+        //    console.log(boundFunc()); // 60 
+
+       ReactDOM.render(
+         <h1>This and Bind!</h1>,
+         document.getElementById("app")
+       );
+    </script>
+
+</body>
+</html>
+

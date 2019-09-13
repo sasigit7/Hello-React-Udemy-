@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Building Complex Stateless Functional Components</title>
+
+    <!-- REACT LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+  <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->  
+  <div id="app">REACT HAS NOT RENDERED YET</div>
+  
+  <!-- JAVASCRIPT -->
+  <script type="text/babel"> 
+// PARENT COMPONENT
+  var ColorSpectrum = function () {
+      return (
+        <div>
+         <Red />
+         <Orange />
+         <Yellow />
+         <Green />
+         <Blue />
+         <Indigo />
+         <Violet />
+        </div>
+      );
+  }
+  
+  // CHILD COMPONENT
+   var Red = function () {
+        var redStyle = {
+        width: 150,
+        height: 50,
+        backgroundColor: "red"
+    }
+        return (
+            <h1 style={redStyle}>Red</h1>
+        );
+    }
+ // CHILD COMPONENT
+    var Orange = function () {
+        var orangeStyle = {
+        width: 150,
+        height: 50,
+        backgroundColor: "orange"
+   }
+        return (
+            <h1 style={orangeStyle}>Orange</h1>
+        );
+    }
+ // CHILD COMPONENT
+    var Yellow = function () {
+        var yellowStyle = {
+        width: 150,
+        height: 50,
+        backgroundColor: "yellow"
+   }
+        return (
+            <h1 style={yellowStyle}>Yellow</h1>
+        );
+    }
+// CHILD COMPONENT
+    var Green = function () {
+        var greenStyle = {
+        width: 150,
+        height: 50,
+        backgroundColor: "green"
+   }
+        return (
+            <h1 style={greenStyle}>Green</h1>
+        );
+    }
+// CHILD COMPONENT
+    var Blue = function () {
+        var blueStyle = {
+        width: 150,
+        height: 50,
+        backgroundColor: "blue"
+   }
+        return (
+            <h1 style={blueStyle}>Blue</h1>
+        );
+    }
+// CHILD COMPONENT
+    var Indigo = function () {
+          var indigoStyle = {
+          width: 150,
+          height: 50,
+          backgroundColor: "indigo"
+   }
+        return (
+            <h1 style={indigoStyle}>Indigo</h1>
+        );
+    }
+// CHILD COMPONENT
+    var Violet = function () {
+        var violetStyle = {
+        width: 150,
+        height: 50,
+        backgroundColor: "violet"
+   }
+        return (
+            <h1 style={violetStyle}>Violet</h1>
+        );
+    }
+// CHILD COMPONENT
+    ReactDOM.render(
+     // REACT WHAT
+      <ColorSpectrum />, 
+    // REACT WHERE
+     document.getElementById("app")
+    );
+
+  </script>
+</body>
+</html>
+
+

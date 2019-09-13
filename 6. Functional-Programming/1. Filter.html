@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter Method:</title>
+</head>
+<body>
+    <script>
+       // EXAMPLE -1: 
+       var testScores = [92, 87, 54, 63, 75, 59];
+       
+       // USING A FOR LOOP: 
+    //    var graduation = [];
+    //    for(var i = 0; i <testScores.length; i++) {
+    //        if(testScores[i] > 60) {
+    //         graduation.push(testScores[i]);
+    //        }
+    //     }
+      //console.log(graduation); // [92, 87, 63, 75]
+
+       // USING A FILTER METHOD: 
+        var graduation = testScores.filter(function(score) {
+            return score > 60;
+        });
+        // console.log(graduation); // [92, 87, 63, 75]
+
+       // EXAMPLE -2:
+    var weather = [72, 84, 34, 56, 92, 24, 47, 85, 72, 54];
+
+      // USING A FOR LOOP:
+    //  var goOutside = [];
+    //   for(let i = 0; i < weather.length; i++) {
+    //       if(weather[i] > 70) {
+    //          goOutside.push(weather[i]);
+    //       }
+    //   }
+    //  console.log(goOutside); // [72, 84, 92, 85, 72]
+   
+   // USING A FILTER METHOD:  
+     var goOutside = weather.filter(function(temp) {
+         return temp > 70;
+      });
+    // console.log(goOutside); // [72, 84, 92, 85, 72]
+    
+   //  EXAMPLE-3: 
+   var forecast = [
+       {day: 'Monday', sun: true},
+       {day: 'Tuesday', sun: false},
+       {day: 'Wednesday', sun: false},
+       {day: 'Thursday', sun: true},
+       {day: 'Friday', sun: false},
+       {day: 'Saturday', sun: true},
+       {day: 'Sunday', sun: false}
+       ];
+     
+     // USING A FOR LOOP: 
+    //  var sunnyDays = [];
+    //  for (var i = 0; i < forecast.length; i++) {
+    //      if(forecast[i].sun === true) {
+    //       sunnyDays.push(forecast[i]);
+    //      }
+    //  }
+     //console.log(sunnyDays); 
+     // [{day: 'Monday', sun: true}, 
+     // {day: 'Thursday', sun: true},
+     // {day: 'Saturday', sun: true}]
+
+    // USING A FILTER METHOD: 
+    var sunnyDays = forecast.filter(function(weather) {
+        return weather.sun;
+    });
+    console.log(sunnyDays); 
+    
+    </script>
+</body>
+</html>
+
+
+

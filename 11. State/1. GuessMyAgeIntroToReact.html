@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>State: Guess My Age</title>
+    
+    <!-- REACT LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">REACT HAS NOT RENDERED YET!</div>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+    class GuessAge extends React.Component {
+        // Whenever an object is created via a class in JavaScript, 
+        // JavaScript invokes the constructor function. 
+        // React, will invoke the constructor function with the props and context of the component. 
+        //If you would like to set a property or access "this" inside the constructor, you need to call super()
+        
+        // REGULAR CONSTRUCTOR: 
+    //     constructor(props) {
+    //         super(props);
+
+    //         this.state = {
+    //             age: "Guess my age"
+    //         }
+    //         this.onButtonClick = this.onButtonClick.bind(this);
+    //     }
+        
+    //     onButtonClick () {
+    //         this.setState({
+    //             age: "35"
+    //         });
+    //     }
+
+    //     render() {
+    //         return (
+    //             <div>
+    //               <h1>Guessing Game</h1>
+    //               <h2>{this.state.age}</h2>
+    //               <button onClick={this.onButtonClick}>Reveal my Age</button>
+    //             </div>
+    //         );
+    //     }
+    // }
+      
+      // BIND IN CONSTRUCTOR:
+    //   constructor(props) {
+    //         super(props);
+
+    //         this.state = {
+    //             age: "Guess my age"
+    //         }
+    //        // this.onButtonClick = this.onButtonClick.bind(this);
+    //     }
+        
+    //     onButtonClick () {
+    //         this.setState({
+    //             age: "35"
+    //         });
+    //     }
+
+    //     render() {
+    //         return (
+    //             <div>
+    //               <h1>Guessing Game</h1>
+    //               <h2>{this.state.age}</h2>
+    //               <button onClick={this.onButtonClick.bind(this)}>Reveal my Age</button>
+    //             </div>
+    //         );
+    //     }
+    // }
+
+      // USE A FAT ARROW FUNCTION TO RENDER: 
+      constructor(props) {
+            super(props);
+
+            this.state = {
+                age: "Guess my age"
+            }
+            this.onButtonClick = this.onButtonClick.bind(this);
+        }
+        
+        onButtonClick () {
+            this.setState({
+                age: "35"
+            });
+        }
+
+        render() {
+            return (
+                <div>
+                  <h1>Guessing Game</h1>
+                  <h2>{this.state.age}</h2>
+                  <button onClick={() => this.onButtonClick()}>Reveal my Age</button>
+                </div>
+            );
+        }
+    }
+       ReactDOM.render(
+          <GuessAge />,
+          document.getElementById("app")
+       );
+    </script>
+
+</body>
+</html>
+

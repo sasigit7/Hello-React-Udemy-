@@ -1,0 +1,21 @@
+                  :::::::::::::::::FUNCTIONAL STATELESS COMPONENTS::::::::::::::::::
+1. State not managed.
+2. Easier to Read and Write.
+3. Better Performance.
+4. No "this" Keyword.
+5. Best Practise. 
+
+                  ::::::::::::::::::CLASS COMPONENTS::::::::::::::::::::
+1. JavaScript classes introduced in ECMAScript2015 are primarily syntactical 
+   sugar over JavaScript's existing prototype based inheritance. 
+2. The class syntax is not introducing a new object-oriented inheritance model
+   to JavaScript.
+3. JavaScript classes provide a much simpler and clearer syntax to create objects
+   and deal with inheritance. 
+4. What we use in class components?  
+   A) "this" Keyword
+   B) Lifecycle Methods
+
+
+
+

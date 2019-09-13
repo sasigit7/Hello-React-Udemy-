@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Styling Stateless Functional Components Externally</title>
+
+    <!-- REACT LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    
+    <!-- CSS Link -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->  
+  <div id="app">REACT HAS NOT RENDERED YET</div>
+  
+  <!-- JAVASCRIPT -->
+  <script type="text/babel">
+    var Red = function () {
+        return (
+            <h1 className="red">Red</h1>
+        );
+    }
+
+    var Orange = function () {
+        return (
+            <h1 className="orange">Orange</h1>
+        );
+    }
+
+    var Yellow = function () {
+        return (
+            <h1 className="yellow">Yellow</h1>
+        );
+    }
+
+    var Green = function () {
+        return (
+            <h1 className="green">Green</h1>
+        );
+    }
+
+   var Blue = function () {
+        return (
+            <h1 className="blue">Blue</h1>
+        );
+    }
+
+    var Indigo = function () {
+        return (
+            <h1 className="indigo">Indigo</h1>
+        );
+    }
+
+    var Violet = function () {
+        return (
+            <h1 className="violet">Violet</h1>
+        );
+    }
+
+    ReactDOM.render(
+     // REACT WHAT
+      <div>
+        <Red />
+        <Orange />
+        <Yellow />
+        <Green />
+        <Blue />
+        <Indigo />
+        <Violet />
+      </div>, 
+    // REACT WHERE
+     document.getElementById("app")
+    );
+
+  </script>
+</body>
+</html>

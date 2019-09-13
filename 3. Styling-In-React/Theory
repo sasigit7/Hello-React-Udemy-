@@ -1,0 +1,8 @@
+::::::::::::::::::REACT STYLING - INLINE APPROACH::::::::::::::::
+1. Blurred Separation of concerns.
+2. Style within a component.
+3. Bugs easy to locate.
+4. Self contained component.
+
+
+

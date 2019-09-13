@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Challenge-2</title>
+    
+    <!-- REACT LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">REACT HAS NOT RENDERED YET!</div>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+       var siblings = [
+           {id: 1, name: "Shashi", female: false},
+           {id: 2, name: "Chukki", female: false},
+           {id: 3, name: "Jhansi", female: true},
+           {id: 4, name: "Chakki", female: true}
+       ];
+
+// Use filter method to return only female names to the DOM: 
+
+    //   class FamilyList extends React.Component {
+    //        render() {
+    //            // Filter Array then transform with map method
+    //            var siblingsListItem = this.props.siblings.filter(function(person){
+    //                return person.female;
+    //            }).map(function(person){
+    //                return <div key={person.id}>{person.name}</div>
+    //            });
+    //            return (
+    //                <div>{siblingsListItem}</div>
+    //            );
+    //        }
+    //    }
+
+// Alternative method: 
+        class FamilyList extends React.Component {
+                render() {
+                    // Filter Array then transform with map method
+                    return (
+                        <div>{this.props.siblings.filter(function(person){
+                             return person.female;
+                    }).map(function(person){
+                        return <div key={person.id}>{person.name}</div>
+                    })}</div>
+                    );
+                }
+            }
+
+    ReactDOM.render(
+        <FamilyList siblings={siblings}/>,
+        document.getElementById("app")
+       );
+    </script>
+
+</body>
+</html>
+

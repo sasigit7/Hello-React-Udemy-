@@ -1,0 +1,27 @@
+                    
+                    :::::::::::::::::::::AJAX::::::::::::::::::
+1. AJAX stands for AsynchronousJavaScriptAndXML.
+2. In a nutshell, it is the use of the XMLHttpRequest object to communicate with servers.
+3. It can send and recieve information in various formats, including JSON, XML, HTML and text files. 
+4. AJAX's most appealing characteristic is it's "asynchronous" nature, which means it can communicate with 
+   the server, exchange data, update the page without having to refresh the page. 
+5. The two major features of AJAX allow you to do the following: 
+   A) Make requests to the server without reloading the page.
+   B) Recieve and work with the data from the server. 
+
+
+                    :::::::::::::::::::::::API:::::::::::::::::::::
+1. An Application Program Interface (API) is a set of routines, protocols, and tools for building 
+   software applications. 
+2. Basically, an API specifies how software components should interact. 
+
+
+                    :::::::::::::::::::::::FETCH METHOD:::::::::::::::::::::
+1. The fetch() method takes one mandatory argument, the path to the resource you want to fetch.
+2. It returns a promise that resolves to the Response to the request, whether it is successful or not.
+
+     
+                    :::::::::::::::::::::::JAVASCRIPT PROMISE:::::::::::::::::::::
+1. The Promise object represents the eventual completion (or failure) of an asynchronous operation,
+   and its resulting value. 
+

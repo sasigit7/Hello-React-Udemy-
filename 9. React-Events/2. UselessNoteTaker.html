@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Events: UseLessNoteTaker </title>
+    
+    <!-- REACT LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+    <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app">REACT HAS NOT RENDERED YET!</div>
+
+    <!-- JAVASCRIPT -->
+    <script type="text/babel">
+       // Create a note component: 
+       class Note extends React.Component {
+           handleButtonEdit() {
+               alert("this function will edit a note");
+           }
+
+           handleButtonDelete() {
+               alert("this function will delete a note");
+           }
+
+           render() {
+              // console.log(this);
+               return (
+                  <div> 
+                    <h1>Useless Note Taker</h1>
+                    {/* Naming Convention:
+                      1. Begin with "on" or "handle"
+                      2. Name the DOM element (here, button)
+                      3. Describe the expected action (here, edit / delete)
+                    */}
+                    <button onClick={this.handleButtonEdit}>edit note</button>
+                    <button onClick={this.handleButtonDelete}>delete note</button>
+                  </div>
+                 );
+           }
+       }
+
+         ReactDOM.render(
+             <Note />,
+         // REACT WHERE - DIV WITH ID OF "APP"
+         document.getElementById("app")
+       );
+    </script>
+
+</body>
+</html>
+

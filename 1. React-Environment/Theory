@@ -1,0 +1,16 @@
+         ::::::::::::::::::::::::JSX:::::::::::::::::::::
+1. JSX stands for JavaScript Syntax Extension.
+2. JSX is neither a string nor a HTML.
+3. JSX may look like a template language but it will come with full power of JavaScript.
+4. JSX is used in react to describe how the UI should look like.
+5. JSX produces React elements. 
+
+        ::::::::::::::::::CODE REFACTOR::::::::::::::::::
+ 1. Code Refactoring is the process of restructuring existing computer code.
+ 2. Changing the factoring without changing it's external behaviour. 
+ 3. Advantages include improved code readability, source code maintainability,
+    reduced complexity and create a more expressive internal architecture 
+    or object model to improve extensibility. 
+ 
+
+ 

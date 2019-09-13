@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Styling Stateless Functional Components Internally</title>
+
+    <!-- REACT LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- REACT DOM LIBRARY -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+  <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->  
+  <div id="app">REACT HAS NOT RENDERED YET</div>
+  
+  <!-- JAVASCRIPT -->
+  <script type="text/babel">
+  // Create a JavaScript Object
+   var redStyle = {
+    width: 150,
+    height: 50,
+    backgroundColor: "red"
+   }
+   var Red = function () {
+        return (
+            // Assign object to attribute of element to style
+            <h1 style={redStyle}>Red</h1>
+        );
+    }
+
+    var orangeStyle = {
+    // Create a JavaScript Object
+    width: 150,
+    height: 50,
+    backgroundColor: "orange"
+   }
+    let Orange = function () {
+        return (
+             // Assign object to attribute of element to style
+            <h1 style={orangeStyle}>Orange</h1>
+        );
+    }
+
+    var yellowStyle = {
+    // Create a JavaScript Object
+    width: 150,
+    height: 50,
+    backgroundColor: "yellow"
+   }
+    var Yellow = function () {
+        return (
+             // Assign object to attribute of element to style
+            <h1 style={yellowStyle}>Yellow</h1>
+        );
+    }
+
+
+    var greenStyle = {
+    // Create a JavaScript Object
+    width: 150,
+    height: 50,
+    backgroundColor: "green"
+   }
+    var Green = function () {
+        return (
+             // Assign object to attribute of element to style
+            <h1 style={greenStyle}>Green</h1>
+        );
+    }
+
+
+    var blueStyle = {
+    // Create a JavaScript Object    
+    width: 150,
+    height: 50,
+    backgroundColor: "blue"
+   }
+    var Blue = function () {
+        return (
+            // Assign object to style attribute of h1 element
+            <h1 style={blueStyle}>Blue</h1>
+        );
+    }
+
+
+    var indigoStyle = {
+    // Create a JavaScript Object    
+    width: 150,
+    height: 50,
+    backgroundColor: "indigo"
+   }
+    let Indigo = function () {
+        return (
+             // Assign object to style attribute of h1 element
+            <h1 style={indigoStyle}>Indigo</h1>
+        );
+    }
+
+
+    var violetStyle = {
+    // Create a JavaScript Object    
+    width: 150,
+    height: 50,
+    backgroundColor: "violet"
+   }
+    var Violet = function () {
+        return (
+             // Assign object to style attribute of h1 element
+            <h1 style={violetStyle}>Violet</h1>
+        );
+    }
+
+    ReactDOM.render(
+     // REACT WHAT
+      <div>
+        <Red />
+        <Orange />
+        <Yellow />
+        <Green />
+        <Blue />
+        <Indigo />
+        <Violet />
+      </div>, 
+    // REACT WHERE
+     document.getElementById("app")
+    );
+
+  </script>
+</body>
+</html>
